@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<planes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="military_planes.xsd">
+    <plane id="p1">
+        <model>F-22 Raptor</model>
+        <origin>USA</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>8</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>18.92</length>
+            <width>13.56</width>
+            <height>5.08</height>
+        </parameters>
+        <price>150000000</price>
+    </plane>
+    <plane id="p2">
+        <model>F-35 Lightning II</model>
+        <origin>USA</origin>
+        <chars>
+            <type>interceptor</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>6</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>20.1</length>
+            <width>14.1</width>
+            <height>4.74</height>
+        </parameters>
+        <price>100000000</price>
+    </plane>
+    <plane id="p3">
+        <model>F-16 Fighting Falcon</model>
+        <origin>USA</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>6</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>15.06</length>
+            <width>9.96</width>
+            <height>4.88</height>
+        </parameters>
+        <price>80000000</price>
+    </plane>
+    <plane id="p4">
+        <model>F-15 Eagle</model>
+        <origin>USA</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>8</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>19.43</length>
+            <width>13.05</width>
+            <height>5.63</height>
+        </parameters>
+        <price>120000000</price>
+    </plane>
+    <plane id="p5">
+        <model>Mirage 2000</model>
+        <origin>France</origin>
+        <chars>
+            <type>interceptor</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>4</missiles>
+                <radar>false</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>14.36</length>
+            <width>9.13</width>
+            <height>5.20</height>
+        </parameters>
+        <price>70000000</price>
+    </plane>
+    <plane id="p6">
+        <model>Gripen</model>
+        <origin>Sweden</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>6</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>14.10</length>
+            <width>8.40</width>
+            <height>4.50</height>
+        </parameters>
+        <price>60000000</price>
+    </plane>
+    <plane id="p7">
+        <model>F/A-18 Hornet</model>
+        <origin>USA</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>6</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>17.07</length>
+            <width>12.31</width>
+            <height>4.66</height>
+        </parameters>
+        <price>94000000</price>
+    </plane>
+    <plane id="p8">
+        <model>Typhoon FGR4</model>
+        <origin>UK</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>8</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>15.96</length>
+            <width>11.09</width>
+            <height>5.28</height>
+        </parameters>
+        <price>85000000</price>
+    </plane>
+    <plane id="p9">
+        <model>SAAB JAS 39 Gripen</model>
+        <origin>Sweden</origin>
+        <chars>
+            <type>fighter</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>6</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>14.1</length>
+            <width>8.4</width>
+            <height>4.5</height>
+        </parameters>
+        <price>65000000</price>
+    </plane>
+    <plane id="p10">
+        <model>Dassault Rafale</model>
+        <origin>France</origin>
+        <chars>
+            <type>interceptor</type>
+            <seats>1</seats>
+            <ammunition>
+                <missiles>9</missiles>
+                <radar>true</radar>
+            </ammunition>
+        </chars>
+        <parameters>
+            <length>15.30</length>
+            <width>10.90</width>
+            <height>5.34</height>
+        </parameters>
+        <price>74000000</price>
+    </plane>
+</planes>

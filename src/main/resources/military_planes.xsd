@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="modelType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="countryType">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="planeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="support"/>
+            <xs:enumeration value="escort"/>
+            <xs:enumeration value="fighter"/>
+            <xs:enumeration value="interceptor"/>
+            <xs:enumeration value="reconnaissance"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="seatNumberType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="booleanType">
+        <xs:restriction base="xs:boolean"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="missileNumberType">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="dimensionType">
+        <xs:restriction base="xs:decimal"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="currencyType">
+        <xs:restriction base="xs:decimal"/>
+    </xs:simpleType>
+
+    <xs:complexType name="charsType">
+        <xs:sequence>
+            <xs:element name="type" type="planeType"/>
+            <xs:element name="seats" type="seatNumberType"/>
+            <xs:element name="ammunition" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="missiles" type="missileNumberType"/>
+                        <xs:element name="radar" type="booleanType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="parametersType">
+        <xs:sequence>
+            <xs:element name="length" type="dimensionType">
+                <xs:annotation>
+                    <xs:documentation>Length in meters</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="width" type="dimensionType">
+                <xs:annotation>
+                    <xs:documentation>Width in meters</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="height" type="dimensionType">
+                <xs:annotation>
+                    <xs:documentation>Height in meters</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="planeComplexType">
+        <xs:sequence>
+            <xs:element name="model" type="modelType"/>
+            <xs:element name="origin" type="countryType"/>
+            <xs:element name="chars" type="charsType"/>
+            <xs:element name="parameters" type="parametersType"/>
+            <xs:element name="price" type="currencyType">
+                <xs:annotation>
+                    <xs:documentation>Price in talers</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="planes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="plane" type="planeComplexType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
